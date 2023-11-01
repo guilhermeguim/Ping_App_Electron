@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ping Monitor</title>
+  <script>require('./js/jquery.min')</script>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../node_modules/flatpickr/dist/themes/dark.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <h1>Ping Monitor</h1>
+  <div class="status-bar">
+    <p class="running-status">Status: Running</p>
+    <p class="update-status">| Update Rate: 10s</p>
+  </div>
+
+
+  <div class="config-container">
+    <div>
+        <button type="button" class="btn btn-primary" id="startButton">Start Ping</button>
+        <button type="button" class="btn btn-primary" id="stopButton">Stop Ping</button>
+        <button type="button" class="btn btn-primary" id="addButton">Add Address</button>
+        <button type="button" class="btn btn-primary" id="deleteButton">Delete Address</button>
+    </div>
+
+    <div class="needs-validation" id="form-time" novalidate>
+      <div>
+        <label id="pingIntervalLbl" for="pingInterval">Ping Interval (s): </label>
+        <div class="feedback-negative">Update Error! Min. Value: 5 </div>
+        <div class="feedback-positive">Updated!</div>
+      </div>
+      <input type="number" id="pingInterval" min="5" value="10" pattern="^[5-9]\d*$" required>
+      <button type="submit" class="btn btn-primary" id="updateButton">Update</button>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <table class="table table-dark table-striped table-bordered">
+      
+      <thead id="t_head">
+        <tr>
+          <th scope="col" class="text-center">IP Address</th>
+          <th scope="col" class="text-center">Name</th>
+          <th scope="col" class="text-center">Status</th>
+          <th scope="col" class="text-center">Latency</th>
+          <th scope="col" class="text-center">Last Loss</th>
+        </tr>
+      </thead>
+
+      <tbody class="table-group-divider" id="status-table-body">
+        <!-- Os dados da tabela serão preenchidos aqui -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="graph-container">
+      <p class="graph-title">Graph Plotter</p>
+      <form class="plot-form">
+        
+        <div>
+          <label  class="graph-lbl" for="ip-select">IP Address:</label>
+          <select id="ip-select" class="form-select" aria-label="Select IP Address"></select>
+        </div>
+        <div>
+          <label class="graph-lbl" for="type-select">Variable Type:</label>
+          <select id="type-select" class="form-select" aria-label="Select Variable Type">
+            <option selected value="status">Status</option>
+            <option value="latency">Latency</option>
+          </select>
+        </div>
+        <div>
+          <label class="graph-lbl" for="datePicker">Select Date Range:</label>
+          <input class="form-control" type="datetime-local" placeholder="Select DateTime" id="datePicker" >
+        </div>
+        
+      </form>
+        <button type="button" class="btn btn-primary" id="plotButton">Plot</button>
+  </div>
+
+  <script>require('./js/renderer')</script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>require('./js/jquery.min')</script>
+  <script src="../node_modules/flatpickr/dist/flatpickr.js"></script>
+
+</body>
+</html>

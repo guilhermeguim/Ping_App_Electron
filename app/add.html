@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Address</title>
+  <script>require('./js/jquery.min')</script>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/add.css">
+  <script src="../node_modules/plotly.js/dist/plotly.js"></script>
+</head>
+<body>
+  <h1>Add New Address</h1>
+
+  <form  method="post" class="row g-3 needs-validation" novalidate>
+
+      <div class="row">
+          <label for="inputHMC" class="form-label">IP Address:</label>
+          <input name="ipAddress" type="text" class="form-control" id="inputIP" placeholder="Ex: 192.168.100.1" pattern="^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$" required  />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Provide a valid IP Address</div>
+      </div>
+      <div class="row">
+          <label for="inputName" class="form-label name-lbl">Device Name:</label>
+          <input name="name" type="text" class="form-control form-name" id="inputName" pattern="^(?!\s+$).+" required /> 
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Do not use only spaces</div>
+      </div>
+      <div class="row">
+          <div class="col-6">
+            <button id="saveButton"type="submit" class="btn btn-primary save-btn">Save</button>
+          </div>
+      </div>
+  </form>
+
+  <script>require('./js/validation')</script>
+  <script>require('./js/add')</script>
+  <script>require('./js/renderer')</script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>require('./js/jquery.min')</script>
+
+  
+
+
+</body>
+</html>

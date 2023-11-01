@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Bold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Italic.ttf');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-BoldItalic.ttf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    background-color: #283457;
+    font-family: 'Montserrat';
+    color: white;    
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-right: 25px;
+    margin-bottom: 12px;
+}
+
+.config-container {
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: 30px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-flex;
+}
+
+.update-status{
+    margin-left: 0;
+    margin-right: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.running-status{
+    margin-left: 0;
+    margin-right: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.status-bar{
+    font-size: 12px;
+    font-weight: normal;
+    display: inline-flex;
+    background-color: green;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.table-dark {
+    --bs-table-color: #012C5E;
+    --bs-table-bg: #cecece;
+    --bs-table-border-color: #585858;
+    --bs-table-striped-bg: #e6e6e6;
+    --bs-table-striped-color: #012C5E;
+    --bs-table-active-bg: #878787;
+    --bs-table-active-color: #012C5E;
+    --bs-table-hover-bg: #9b9b9b;
+    --bs-table-hover-color: #012C5E;
+}
+
+.table-container {
+
+    max-height: 70vh;
+    overflow: auto;
+    margin: auto;
+  }
+
+#t_head {
+    position: sticky; 
+    top: 0; z-index: 1;
+}
+
+th{
+    font-size: 15px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+tr{
+    height: 40px;
+    vertical-align: middle;
+}
+
+td{
+    font-size: 12px;
+    height: 15px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+#pingInterval{
+    width: 50px;
+}
+
+.config-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#pingInterval {
+    margin-right: 0;
+}
+
+#pingIntervalLbl{
+    margin-right: 10px;
+}
+
+#updateButton {
+    margin-left: 10px;
+}
+
+.btn-primary {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 13px;
+
+    padding-left: 7px;
+    padding-right:7px;
+    padding-top: 4px;
+    padding-bottom:4px;
+    background-color: #e6e6e6;
+    color: #012C5E;
+    border-radius: 0.3rem;
+    border-color: #D0D0D0;
+    --bs-btn-active-bg: #878787;
+    --bs-btn-active-border-color: #012C5E;
+    --bs-btn-active-color: #012C5E;
+}
+
+.btn-primary:hover {
+
+    background-color: #c5c5c5;
+    color: #012C5E;
+    border-color: #012C5E;
+}
+
+.graph-container {
+    align-items: center;
+    margin-top: 3px;
+    display: flex;
+}
+
+.plot-form{
+    display: flex;
+}
+
+.form-control{
+    font-size: 12px;
+    width: 180px;
+    margin-right: 5px;
+}
+
+.form-select{
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+#ip-select{
+    font-size: 12px;
+    width: 150px;
+}
+
+#type-select{
+    font-size: 12px;
+    width: 150px;
+}
+
+.graph-title{
+    margin: 0;
+    padding-right: 10px;
+    font-weight: bold;
+    align-self: end;
+    margin-bottom: 5px;
+}
+
+label{
+    
+    margin-left: auto;
+
+}
+
+#plotButton{
+    align-self: end;
+}
+
+.graph-lbl{
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.needs-validation{
+    display: flex;
+}
+
+.feedback-negative{
+    font-size: 11px;
+    font-weight: bold;
+    color: red;
+    display: none;
+    margin-right: 5px;
+}
+
+.feedback-positive{
+    font-size: 11px;
+    font-weight: bold;
+    color: green;
+    display: none;
+}
+
+#pingIntervalLbl{
+    font-size: 14px;
+}
